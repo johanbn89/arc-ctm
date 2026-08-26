@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.env
+.env.*
+.idea/
+.vscode/
+
+# Generated experiment outputs and model checkpoints.
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Downloaded datasets are reproducible and can be very large.
+data/*
+!data/README.md

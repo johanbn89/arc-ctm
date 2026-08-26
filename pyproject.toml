@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arc-ctm"
+version = "0.1.0"
+description = "Synthetic operator-inference experiments with typed weight-shared Continuous Thought Machines"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.5",
+]
+
+[project.scripts]
+arc-ctm = "arc_ctm.cli:main"
+arc-ctm-overfit = "arc_ctm.arc_overfit:main"
+arc-ctm-multitask = "arc_ctm.arc_multitask:main"
+arc-ctm-spatial = "arc_ctm.arc_spatial:main"
+arc-ctm-compose = "arc_ctm.composition_experiment:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
